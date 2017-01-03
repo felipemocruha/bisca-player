@@ -22,3 +22,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Card{
+    width: 40vw;
+    height: 40vh;
+}

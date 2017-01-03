@@ -1,25 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import {Card, Button} from 'mdl-react';
+import {Card, CardTitle, CardActions} from 'react-toolbox/lib/card';
+import Search from './components/search';
+import PlayerButtons from './components/playerButtons';
+import YoutubePlayer from 'youtube-player';
 
-class App extends Component {
-    render() {
-	var styles = {
+const App = () => (
+    <div className="App">
+	<Card raised className="Card">
+	    <CardTitle 
+		title="bisca-player"
+		subtitle="stream from youtube"
+	    />
+
+	    <Search />
+
+	    <div id="player">
+
+	    </div>
 	    
-	};
-	
-      return (
-          <div className="App">
-	    <Card style={{width: '100%', height: '50vh'}}>
-              <h2>bisca-player</h2>
-	      <Button>Stop</Button>
-	      <Button>Previous</Button>
-	      <Button>Play/Pause</Button>
-	      <Button>Next</Button>	      
-	    </Card>
-          </div>
-      );
-  }
-}
+	    <CardActions>
+		<PlayerButtons/>
+	    </CardActions>
+	</Card>
+    </div>
+);
 
 export default App;
